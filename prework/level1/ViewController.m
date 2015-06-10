@@ -34,9 +34,12 @@
     NSTimeInterval epochSeconds = [date timeIntervalSince1970];
     if (stringValue != nil && (epochSeconds - lastSaveTime < appDelegate.cacheExipration*60)) {
         self.billAmountTextField.text = stringValue;
+        appDelegate.currentAmountText = self.billAmountTextField.text;
         appDelegate.selectedLocale = [defaults objectForKey:@"defaultLocale"];
+ NSLog(@"gaga2");
     } else if (appDelegate.selectedLocale == nil) {
         appDelegate.selectedLocale = @"zh_Hant_TW";
+  NSLog(@"gag3");
     }
     self.billAmountTextField.adjustsFontSizeToFitWidth = YES;
     self.tipLabel.adjustsFontSizeToFitWidth = YES;
@@ -90,7 +93,8 @@
     
     NSDecimalNumber *tip = [amount decimalNumberByMultiplyingBy:per];
     tip = [tip decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithString:@"100"]];
-
+    tip = [tip decimalNumberByAdding:amount];
+    
     NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
     NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:appDelegate.selectedLocale];
     [currencyFormatter setLocale:locale];
