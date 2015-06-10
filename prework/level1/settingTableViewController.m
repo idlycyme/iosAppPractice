@@ -101,6 +101,10 @@
     int validPercentage =[appDelegate validIntRange: self.defaultPercentageTextField min:0 max:100];
     self.defaultPercentageTextField.text = [NSString stringWithFormat:@"%d", validPercentage];
     appDelegate.defaultPercent = [self.defaultPercentageTextField.text doubleValue];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:appDelegate.defaultPercent forKey:@"defaultPercentage"];
+    [defaults synchronize];
 }
 
 

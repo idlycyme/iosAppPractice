@@ -28,7 +28,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *stringValue = [defaults objectForKey:@"lastAmount"];
     double lastSaveTime = [defaults doubleForKey:@"lastSaveTime"];
-
+    int defaultPercentage = [defaults integerForKey:@"defaultPercentage"];
+    
     appDelegate.cacheExipration = (int)[defaults integerForKey:@"cacheExpiration"];
     NSDate* date = [NSDate date];
     NSTimeInterval epochSeconds = [date timeIntervalSince1970];
@@ -36,14 +37,13 @@
         self.billAmountTextField.text = stringValue;
         appDelegate.currentAmountText = self.billAmountTextField.text;
         appDelegate.selectedLocale = [defaults objectForKey:@"defaultLocale"];
- NSLog(@"gaga2");
+        appDelegate.defaultPercent = defaultPercentage;
     } else if (appDelegate.selectedLocale == nil) {
         appDelegate.selectedLocale = @"zh_Hant_TW";
-  NSLog(@"gag3");
     }
     self.billAmountTextField.adjustsFontSizeToFitWidth = YES;
     self.tipLabel.adjustsFontSizeToFitWidth = YES;
-    
+    self.percentLabel.text = [NSString stringWithFormat: @"%d", appDelegate.defaultPercent];
     if (appDelegate.currentAmountText) {
         self.billAmountTextField.text = appDelegate.currentAmountText;
     }
