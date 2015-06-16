@@ -1,0 +1,1 @@
+{"links":{"top_rentals":"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json","current_releases":"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/current_releases.json","new_releases":"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json","upcoming":"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/upcoming.json"}}

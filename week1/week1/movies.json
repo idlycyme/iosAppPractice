@@ -1,0 +1,1 @@
+{"links":{"box_office":"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json","in_theaters":"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json","opening":"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json","upcoming":"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json"}}
