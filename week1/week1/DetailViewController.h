@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *detailScrollView;
 
 @property (strong, nonatomic) NSDictionary *movie;
+@property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
 
 @end

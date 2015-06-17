@@ -25,6 +25,8 @@
     self.desc.text = [movie objectForKey:@"synopsis"];
     [self.desc sizeToFit];
     [self.detailScrollView setContentSize:self.desc.frame.size];
+    [self.movieTitle sizeToFit];
+    [self.titleScrollView setContentSize:self.movieTitle.frame.size];
     
     NSString *lowResUrlString = [self convertPosterUrlStringToHeighRes:[movie valueForKeyPath:@"posters.detailed"] Type:@"det"];
     lowResUrlString = [movie valueForKeyPath:@"posters.detailed"];
@@ -64,7 +66,7 @@
     //NSLog(@"ori is %@", retValue);
     if (type != nil && ![type isEqualToString:@"ori"]) {
         NSRange range2 = [retValue rangeOfString:@"ori" options:NSRegularExpressionSearch];
-        if (range.length > 0) {
+        if (range2.length > 0) {
             retValue = [retValue stringByReplacingCharactersInRange:range2 withString:type];
         }
     }

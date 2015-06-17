@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "week1/ViewController.m"
-            timestampString = "456125210.872474"
+            timestampString = "456197507.11538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
-            landmarkName = "@implementation ViewController"
-            landmarkType = "3">
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "-searchBarCancelButtonClicked:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

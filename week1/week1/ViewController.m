@@ -31,6 +31,7 @@ NSMutableArray *presentData;
 NSDictionary *latestRequestedData;
 UITabBarItem *selectedItem;
 UIRefreshControl *refreshControl;
+//static NSString *apiKey = put your key here;
 static NSString *apiKey = put your key here;
 static NSDictionary *apiDict;
 BOOL dataComesBack;
@@ -224,6 +225,10 @@ BOOL dataComesBack;
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.movieSearchBar resignFirstResponder];
+}
+
 
 // table view methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -256,6 +261,7 @@ BOOL dataComesBack;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.movieSearchBar resignFirstResponder];
 }
 
 
@@ -314,8 +320,13 @@ BOOL dataComesBack;
         NSIndexPath *path = [self.movieGridView indexPathForCell:cell];
         NSDictionary *movie = [presentData objectAtIndex:path.row];
         destController.movie = movie;
+        //NSLog(@"movie is %@", movie);
     }
 
 }
+/*
+- (IBAction)dimissKeyboard:(id)sender {
+    [self.movieSearchBar resignFirstResponder];
+}*/
 
 @end

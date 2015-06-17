@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "week1/ViewController.m"
-            timestampString = "456125210.872474"
+            timestampString = "456197507.11538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "@implementation ViewController"
-            landmarkType = "3">
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "-prepareForSegue:sender:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
