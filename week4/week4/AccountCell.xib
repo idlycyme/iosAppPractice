@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCell" rowHeight="67" id="qvd-Zb-wWc" customClass="AccountCell">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qvd-Zb-wWc" id="mNP-1h-MAl">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KsO-tS-uad">
+                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="foO-oN-23g"/>
+                            <constraint firstAttribute="height" constant="48" id="sWn-px-c5h"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clQ-KW-31F">
+                        <rect key="frame" x="127" y="121" width="180" height="56"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@super123" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha7-gX-rPA">
+                        <rect key="frame" x="68" y="30" width="62" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMv-Rp-4Bd">
+                        <rect key="frame" x="303" y="28" width="49" height="30"/>
+                        <state key="normal" title="Logout">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onLogout:" destination="qvd-Zb-wWc" eventType="touchUpInside" id="P8l-gi-55a"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-jN-vGw">
+                        <rect key="frame" x="64" y="8" width="288" height="18"/>
+                        <gestureRecognizers/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KsO-tS-uad" firstAttribute="leading" secondItem="mNP-1h-MAl" secondAttribute="leading" constant="8" id="7C0-wL-M3U"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KsO-tS-uad" secondAttribute="bottom" constant="8" id="9oM-6S-HPv"/>
+                    <constraint firstItem="QMv-Rp-4Bd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ha7-gX-rPA" secondAttribute="trailing" constant="8" id="BPF-aP-XBf"/>
+                    <constraint firstItem="5Im-jN-vGw" firstAttribute="leading" secondItem="KsO-tS-uad" secondAttribute="trailing" constant="8" id="FEe-9j-wHz"/>
+                    <constraint firstAttribute="trailing" secondItem="5Im-jN-vGw" secondAttribute="trailing" constant="8" id="H0G-hm-77U"/>
+                    <constraint firstItem="5Im-jN-vGw" firstAttribute="top" secondItem="mNP-1h-MAl" secondAttribute="top" constant="8" id="Jy3-HC-h8Z"/>
+                    <constraint firstItem="KsO-tS-uad" firstAttribute="top" secondItem="mNP-1h-MAl" secondAttribute="top" constant="8" id="PaV-go-O88"/>
+                    <constraint firstAttribute="bottom" secondItem="QMv-Rp-4Bd" secondAttribute="bottom" constant="8" id="hfb-Og-OCn"/>
+                    <constraint firstAttribute="trailing" secondItem="QMv-Rp-4Bd" secondAttribute="trailing" constant="8" id="r6f-Fr-BdP"/>
+                    <constraint firstItem="Ha7-gX-rPA" firstAttribute="leading" secondItem="KsO-tS-uad" secondAttribute="trailing" constant="12" id="tBD-MO-vEX"/>
+                    <constraint firstItem="Ha7-gX-rPA" firstAttribute="top" secondItem="5Im-jN-vGw" secondAttribute="bottom" constant="4" id="tYj-QE-hxg"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ha7-gX-rPA" secondAttribute="bottom" constant="8" id="xqM-LV-fy5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="loginButton" destination="QMv-Rp-4Bd" id="hh2-C7-oB2"/>
+                <outlet property="name" destination="5Im-jN-vGw" id="UKn-GZ-OOA"/>
+                <outlet property="profileImage" destination="KsO-tS-uad" id="YY3-hg-NQg"/>
+                <outlet property="screenname" destination="Ha7-gX-rPA" id="MtH-Lc-2IV"/>
+            </connections>
+            <point key="canvasLocation" x="96" y="-26.5"/>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
